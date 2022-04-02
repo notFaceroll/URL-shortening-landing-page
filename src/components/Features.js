@@ -3,7 +3,7 @@ import { Card, Title, Description } from './FeatureCardElements';
 
 export default function Features(props) {
   return (
-    <section className='p-8 text-center bg-neutral-gray'>
+    <section className='p-8 text-center bg-neutral-gray flex flex-col gap-12'>
       <h2 className=' text-neutral-veryDarkViolet font-semibold text-xl'>Advanced Statistics</h2>
       <Description>
         Track how your links are performing across the web with our advanced

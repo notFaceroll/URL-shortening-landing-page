@@ -1,7 +1,7 @@
 import React from 'react';
 
 export const Card = ({ children }) => {
-  return <div className="rounded-sm p-6 bg-white text-center">{children}</div>;
+  return <div className="rounded-md p-6 my-6 bg-white text-center">{children}</div>;
 };
 
 export const Title = ({ children }) => {
