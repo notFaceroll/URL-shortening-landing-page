@@ -20,10 +20,10 @@ export const Description = ({ children }) => {
   return <p className=" text-neutral-grayishViolet text-sm">{children}</p>;
 };
 
-export const Icon = ({ children }) => {
+export const Icon = ({ icon }) => {
   return (
-    <div className="absolute -top-1/4 h-24 w-24 text-primary-cyan rounded-full bg-primary-darkViolet">
-      {children}
+    <div className="flex items-center justify-center absolute -top-1/4 h-24 w-24 text-primary-cyan rounded-full bg-primary-darkViolet">
+      <img className='max-w-full block' src={icon} alt="" />
     </div>
   );
 };

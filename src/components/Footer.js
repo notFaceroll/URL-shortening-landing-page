@@ -3,7 +3,7 @@ import { NavBlock, NavHeading, FooterItem } from './FooterElements';
 
 export default function Footer(props) {
   return (
-    <footer className='text-white text-center bg-neutral-veryDarkViolet flex flex-col gap-4 p-8 items-center'>
+    <footer className='text-white text-center bg-neutral-veryDarkViolet flex flex-col gap-4 p-8 items-center sm:flex-row sm:items-start justify-between'>
       <h3 className='text-3xl font-semibold'>Shortly</h3>
       <NavBlock>
         <NavHeading>Features</NavHeading>
@@ -30,6 +30,12 @@ export default function Footer(props) {
           <FooterItem>Contact</FooterItem>
         </ul>
       </NavBlock>
+      <div>
+        Facebook
+        Instagram
+        Twitter
+        Gmail
+      </div>
     </footer>
   );
 }
