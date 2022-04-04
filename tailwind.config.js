@@ -7,6 +7,7 @@ module.exports = {
       },
       backgroundImage: {
         'boostMobile': "url('./assets/bg-boost-mobile.svg')",
+        'boostDesktop': "url('./assets/bg-boost-desktop.svg')",
         'shortenMobile': "url('./assets/bg-shorten-mobile.svg')",
       },
       fontFamily: {

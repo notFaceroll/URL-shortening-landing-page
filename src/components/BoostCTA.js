@@ -2,9 +2,9 @@ import React from 'react'
 
 export default function BoostCTA(props) {
   return (
-    <section className='h-h-79 w-full bg-no-repeat bg-auto bg-boostMobile bg-primary-darkViolet p-8 flex flex-col items-center gap-5 justify-center'>
-      <h2 className='text-white font-bold text-2xl'>Boost your links today</h2>
-      <button className='place-self-center rounded-full bg-primary-cyan py-4 px-12 text-lg font-semibold text-white'>Get Started</button>
+    <section className='flex flex-col items-center justify-center w-full gap-5 p-8 bg-no-repeat bg-auto h-h-79 bg-boostMobile sm:bg-cover sm:bg-boostDesktop bg-primary-darkViolet'>
+      <h2 className='text-2xl font-bold text-white'>Boost your links today</h2>
+      <button className='px-12 py-4 text-lg font-semibold text-white rounded-full place-self-center bg-primary-cyan'>Get Started</button>
     </section>
   );
 }

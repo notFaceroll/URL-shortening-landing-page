@@ -31,7 +31,7 @@ export default function Footer(props) {
             <FooterItem>Contact</FooterItem>
           </ul>
         </NavBlock>
-        <div>Facebook Instagram Twitter Gmail</div>
+        <div>Facebook Instagram Twitter Pinterest</div>
       </div>
     </footer>
   );
