@@ -16,6 +16,10 @@ export const Title = ({ children }) => {
   );
 };
 
+export const TitleDescription = ({children}) => {
+  return (<p className='mx-auto text-xs text-neutral-grayishViolet sm:w-1/2'>{children}</p>)
+}
+
 export const Description = ({ children }) => {
   return <p className="text-xs text-neutral-grayishViolet">{children}</p>;
 };

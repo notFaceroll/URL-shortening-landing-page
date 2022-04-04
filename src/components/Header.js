@@ -11,7 +11,7 @@ export default function Header(props) {
 
   return (
     <header className="flex flex-col justify-between max-w-screen-lg p-8 mx-auto sm:gap-8">
-      <div className="relative flex items-center justify-between sm:gap-8">
+      <div className="relative flex items-center justify-between mb-10 sm:gap-8">
         <span className="text-4xl font-semibold text-neutral-veryDarkViolet">
           Shortly
         </span>
@@ -65,7 +65,7 @@ export default function Header(props) {
           <img src={heroLogo} alt="" />
         </div>
         <div className="flex flex-col gap-8 sm:items-start">
-          <h1 className="text-4xl font-bold text-center text-neutral-veryDarkViolet sm:text-left">
+          <h1 className="text-4xl font-bold text-center md:text-5xl text-neutral-veryDarkViolet sm:text-left">
             More than just shorter links
           </h1>
           <p className="text-center sm:text-left text-neutral-grayishViolet">
@@ -74,7 +74,7 @@ export default function Header(props) {
           </p>
           <button
             aria-label="Get Started"
-            className="px-12 py-4 text-lg font-semibold text-white rounded-full place-self-center sm:self-start bg-primary-cyan"
+            className="px-12 py-4 text-lg font-semibold text-white rounded-full hover:opacity-50 place-self-center sm:self-start bg-primary-cyan"
           >
             Get Started
           </button>

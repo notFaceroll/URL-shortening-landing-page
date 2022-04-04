@@ -17,7 +17,7 @@ export default function UrlCard({ urlToShorten, shortenedUrl }) {
       </p>
       <button
         onClick={handleCopyText}
-        className={`px-4 py-2 ml-4 text-white rounded-md text-xs ${
+        className={`px-4 py-2 sm:ml-4 text-white rounded-md text-xs ${
           isCopied ? 'bg-primary-darkViolet' : 'bg-primary-cyan'
         }`}
       >
