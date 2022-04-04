@@ -2,7 +2,7 @@ import React from 'react';
 
 export const Card = ({ children }) => {
   return (
-    <div className="rounded-md p-6 my-6 z-10 bg-white text-center relative flex flex-col items-center gap-4 ">
+    <div className="relative z-10 flex flex-col items-center gap-4 p-6 my-6 text-center bg-white rounded-md sm:items-start sm:text-left sm:first-of-type:self-start sm:last-of-type:self-end last-of-type:mb-0 sm:last-of-type:mb-6">
       {children}
     </div>
   );
@@ -10,20 +10,20 @@ export const Card = ({ children }) => {
 
 export const Title = ({ children }) => {
   return (
-    <h3 className="font-semibold text-neutral-veryDarkViolet text-lg mt-8">
+    <h3 className="mt-8 text-lg font-semibold text-neutral-veryDarkViolet">
       {children}
     </h3>
   );
 };
 
 export const Description = ({ children }) => {
-  return <p className=" text-neutral-grayishViolet text-sm">{children}</p>;
+  return <p className="text-xs text-neutral-grayishViolet">{children}</p>;
 };
 
 export const Icon = ({ icon }) => {
   return (
-    <div className="flex items-center justify-center absolute -top-1/4 h-24 w-24 text-primary-cyan rounded-full bg-primary-darkViolet">
-      <img className='max-w-full block' src={icon} alt="" />
+    <div className="absolute flex items-center justify-center w-24 h-24 rounded-full sm:w-20 sm:h-20 sm:left-10 -top-1/4 text-primary-cyan bg-primary-darkViolet">
+      <img className='block max-w-full' src={icon} alt="" />
     </div>
   );
 };
