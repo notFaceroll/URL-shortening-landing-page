@@ -1,6 +1,6 @@
 # URL shortening landing page 📃
 
-This is a solution to the [Job listings with filtering challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/url-shortening-api-landing-page-2ce3ob-G). 
+This is a solution to the [URL shortening api landing page challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/url-shortening-api-landing-page-2ce3ob-G). 
 
 
 ## Overview
