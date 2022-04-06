@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { motion } from 'framer-motion';
 
 export default function UrlCard({ urlToShorten, shortenedUrl }) {
   const [isCopied, setIsCopied] = useState(false);
@@ -8,7 +9,13 @@ export default function UrlCard({ urlToShorten, shortenedUrl }) {
     navigator.clipboard.writeText(shortenedUrl);
   };
   return (
-    <aside className="flex flex-col p-4 my-4 overflow-hidden bg-white rounded-md sm:flex-row sm:items-center">
+    <motion.aside
+      initial={{ scale: 1, y: '-50px', opacity: 0 }}
+      animate={{ scale: 1, y: 0, opacity: 1 }}
+      exit={{ scale: 1, y: '-50px', opacity: 0 }}
+      transition={{ duration: 0.2 }}
+      className="flex flex-col p-4 my-4 overflow-hidden bg-white rounded-md sm:flex-row sm:items-center"
+    >
       <p className="pb-2 truncate border-b sm:border-0 sm:pb-0">
         {urlToShorten}
       </p>
@@ -17,12 +24,12 @@ export default function UrlCard({ urlToShorten, shortenedUrl }) {
       </p>
       <button
         onClick={handleCopyText}
-        className={`px-4 py-2 sm:ml-4 text-white rounded-md text-xs ${
+        className={`px-4 py-2 hover:opacity-70 sm:ml-4 text-white rounded-md text-xs ${
           isCopied ? 'bg-primary-darkViolet' : 'bg-primary-cyan'
         }`}
       >
         {isCopied ? 'Copied!' : 'Copy'}
       </button>
-    </aside>
+    </motion.aside>
   );
 }

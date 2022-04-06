@@ -2,12 +2,12 @@ import React, { useState } from 'react';
 import useLocalStorage from '../hooks/useLocalStorage';
 import UrlCard from './UrlCard';
 import axios from 'axios';
+import { AnimatePresence } from 'framer-motion';
 
 export default function UrlShorter(props) {
   const [url, setUrl] = useState('');
-  const [requestedActions, setRequestedActions] = useState([]);
   const baseUrl = 'https://api.shrtco.de/v2/shorten?url=';
-  const [links, setLinks] = useLocalStorage("shortenedLinks", []);
+  const [links, setLinks] = useLocalStorage('shortenedLinks', []);
 
   const userInputHandler = ({ target: { value } }) => {
     setUrl(value);
@@ -47,10 +47,15 @@ export default function UrlShorter(props) {
     setUrl('');
   };
 
+  const clearLinks = () => {
+    setLinks([]);
+    setUrl('');
+  };
+
   return (
     <main className="relative bg-neutral-100">
       <div className="flex flex-col max-w-screen-lg gap-8 p-8 mx-auto">
-        <div className="w-full p-8 bg-right bg-no-repeat bg-contain rounded-md bg-shortenMobile bg-primary-darkViolet">
+        <div className="w-full p-8 bg-right bg-no-repeat bg-contain rounded-md bg-shortenMobile sm:bg-shortenDesktop sm:bg-cover bg-primary-darkViolet">
           <form
             className="box-content flex flex-col self-center gap-4 sm:flex-row"
             onSubmit={handleFetch}
@@ -66,20 +71,30 @@ export default function UrlShorter(props) {
             />
             <button
               type="submit"
-              className="p-2 text-white rounded-md bg-primary-cyan"
+              className="px-6 py-2 text-sm text-white rounded-md bg-primary-cyan hover:bg-primary-cyanHover"
             >
               Shorten It!
             </button>
           </form>
         </div>
         <div>
-          {links.map((item, index) => (
-            <UrlCard
-              key={index}
-              urlToShorten={item.urlToShorten}
-              shortenedUrl={item.shortenedUrl}
-            />
-          ))}
+          {links.length > 0 && (
+            <button
+              className="px-6 py-2 text-sm text-white rounded-md bg-primary-cyan hover:bg-primary-cyanHover"
+              onClick={clearLinks}
+            >
+              Clear List
+            </button>
+          )}
+          <AnimatePresence>
+            {links.map((item, index) => (
+              <UrlCard
+                key={index}
+                urlToShorten={item.urlToShorten}
+                shortenedUrl={item.shortenedUrl}
+              />
+            ))}
+          </AnimatePresence>
         </div>
       </div>
     </main>

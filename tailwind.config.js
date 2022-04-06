@@ -9,6 +9,7 @@ module.exports = {
         'boostMobile': "url('./assets/bg-boost-mobile.svg')",
         'boostDesktop': "url('./assets/bg-boost-desktop.svg')",
         'shortenMobile': "url('./assets/bg-shorten-mobile.svg')",
+        'shortenDesktop': "url('./assets/bg-shorten-desktop.svg')",
       },
       fontFamily: {
         poppins: ['Poppins', 'sans-serif'],
@@ -16,6 +17,7 @@ module.exports = {
       colors: {
         primary: {
           cyan: '#2ACFCF',
+          cyanHover: '#9fd1d1',
           darkViolet: '#3B3054',
         },
         secondary: '#F46262',
